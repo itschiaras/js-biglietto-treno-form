@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="app">
+    <div id="app" class="d-flex align-items-center flex-column">
         <div class="d-flex align-items-center flex-column mt-3 pb-3 w-50 mx-auto bg-light">
             <div class="bg-logo w-100 text-center">
                 <img src="./img/italo-logo.png" alt="">
@@ -25,9 +25,9 @@
                 <h1>Calcola il prezzo del tuo biglietto</h1>
                 <div class="mt-3 d-flex justify-content-around ">
                     <div>
-                        <label for="name" class="form-label">Inserisci nome e cognome</label>
+                        <label for="fLname" class="form-label">Inserisci nome e cognome</label>
                         <div class="input-group">
-                            <input type="text" class="" name="name" id="name">
+                            <input type="text" class="" name="fLname" id="fLname">
                         </div>
                     </div>
     
@@ -57,8 +57,14 @@
             </div>
             
         </div>
-        <div class="ticket">
-            <h3>Il tuo biglietto</h3>
+        <div class="ticket bg-light w-50 mt-3 text-center p-3 d-none">
+            <h2>Il tuo biglietto</h2>
+
+            <div class="d-flex text-start justify-content-around">
+                <h5 id="nameHere"></h5>
+                <h5 id="price"></h5>
+            </div>
+            <button class="my-btn">Procedi all'acquisto</button>
         </div>
     </div>
 

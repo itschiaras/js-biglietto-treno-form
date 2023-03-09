@@ -12,4 +12,10 @@ body {
     filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
     width: 50%;
 }
-
+ 
+.my-btn {
+    background-color: #a6160a;
+    border: 0;
+    color: white;
+    border-radius: .5rem;
+}

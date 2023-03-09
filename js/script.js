@@ -16,43 +16,66 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 const app = document.getElementById('app');
 const kmInput = app.querySelector('input[name="km"]');
 const ageInput = app.querySelector('input[name="age"]');
+const nameInput = app.querySelector('input[name="fLname"');
 const ticket = app.querySelector('.ticket');
+const price = app.querySelector('price');
 const btnCalc = document.getElementById('btnCalc');
 const btnCanc = document.getElementById('btnCanc');
 
 
 
+
 btnCalc.addEventListener('click', function () {
+    ticket.classList.remove('d-none');
     if (ageInput.value < 18) {
     let km = kmInput.value;
     let age = ageInput.value;
     const standardRate = 0.21;
     let ticketPrice = (standardRate * km) - (standardRate * km) * 0.20;
+    const price = app.querySelector('#price');
+    price.innerHTML += `<h5>Prezzo Tariffa Junior</h5>${ticketPrice}&euro;`
+    const nameHere = document.getElementById('nameHere');
+    let name = nameInput.value;
+    nameHere.innerHTML = `<h5>Nome Passeggero</h5>${name}`;
+    
     console.log(ticketPrice);
     } else if (ageInput.value >= 65) {
         let km = kmInput.value;
         let age = ageInput.value;
         const standardRate = 0.21;
         let ticketPrice = (standardRate * km) - (standardRate * km) * 0.40;
+        const price = app.querySelector('#price');
+        price.innerHTML += `<h5>Prezzo Tariffa Senior</h5>${ticketPrice}&euro;`
+        const nameHere = document.getElementById('nameHere');
+        let name = nameInput.value;
+        nameHere.innerHTML = `<h5>Nome Passeggero</h5>${name}`;
         console.log(ticketPrice);
     } else {
         let km = kmInput.value;
         let age = ageInput.value;
         const standardRate = 0.21;
         let ticketPrice = (standardRate * km);
+        const price = app.querySelector('#price');
+        price.innerHTML += `<h5>Prezzo Tariffa Standard</h5>${ticketPrice}&euro;`
+        const nameHere = document.getElementById('nameHere');
+        let name = nameInput.value;
+        nameHere.innerHTML = `<h5>Nome Passeggero</h5>${name}`;
         console.log(ticketPrice);
     }
     })
 
 
-    btnCanc.addEventListener('click', )
+    btnCanc.addEventListener('click', function () {
+        kmInput.value = '';
+        ageInput.value = '';
+        nameInput.value = '';
+        ticket.classList.add('d-none');
+        const price = app.querySelector('#price');
+        price.innerHTML += '';
+    } )
     
 
 
 
 
-// if (ageInput.value < 18) {
-   
-
-// }
 
