@@ -18,6 +18,7 @@ const kmInput = app.querySelector('input[name="km"]');
 const ageInput = app.querySelector('input[name="age"]');
 const ticket = app.querySelector('.ticket');
 const btnCalc = document.getElementById('btnCalc');
+const btnCanc = document.getElementById('btnCanc');
 
 
 
@@ -43,6 +44,8 @@ btnCalc.addEventListener('click', function () {
     }
     })
 
+
+    btnCanc.addEventListener('click', )
     
 
 
