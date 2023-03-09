@@ -14,7 +14,26 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 
 const app = document.getElementById('app');
-const kmInput = app.querySelector('input[name"km"]');
-const ageInput = app.querySelector('input[name"age"]');
-const standardRate = 0.21;
+const kmInput = app.querySelector('input[name="km"]');
+const ageInput = app.querySelector('input[name="age"]');
 const ticket = app.querySelector('.ticket');
+const btnCalc = document.getElementById('btnCalc');
+
+
+
+btnCalc.addEventListener('click', function () {
+    let km = kmInput.value;
+    let age = ageInput.value;
+    const standardRate = 0.21;
+    let ticketPrice = (standardRate * km) - (standardRate * km) * 0.20;
+    console.log(ticketPrice);
+
+    
+
+})
+
+// if (ageInput.value < 18) {
+   
+
+// }
+
