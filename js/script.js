@@ -22,15 +22,31 @@ const btnCalc = document.getElementById('btnCalc');
 
 
 btnCalc.addEventListener('click', function () {
+    if (ageInput.value < 18) {
     let km = kmInput.value;
     let age = ageInput.value;
     const standardRate = 0.21;
     let ticketPrice = (standardRate * km) - (standardRate * km) * 0.20;
     console.log(ticketPrice);
+    } else if (ageInput.value >= 65) {
+        let km = kmInput.value;
+        let age = ageInput.value;
+        const standardRate = 0.21;
+        let ticketPrice = (standardRate * km) - (standardRate * km) * 0.40;
+        console.log(ticketPrice);
+    } else {
+        let km = kmInput.value;
+        let age = ageInput.value;
+        const standardRate = 0.21;
+        let ticketPrice = (standardRate * km);
+        console.log(ticketPrice);
+    }
+    })
 
     
 
-})
+
+
 
 // if (ageInput.value < 18) {
    

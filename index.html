@@ -16,10 +16,28 @@
 
 <body>
 
-    <div id="app">
-        <input type="number" name="km" id="km">
-        <input type="number" name="age" id="age">
-        <button id="btnCalc">Calcola prezzo</button>
+    <div id="app" class="d-flex align-items-center flex-column mt-3">
+        <h1>Calcola il prezzo del tuo biglietto</h1>
+        <div class="mt-3 w-50 d-flex justify-content-around">
+            
+            <div>
+                <label for="km" class="form-label">Inserisci i km da percorrere</label>
+                <div class="input-group">
+                    <input type="number" class="" name="km" id="km">
+                </div>
+            </div>
+
+            <div>
+                <label for="age" class="form-label">Inserisci la tua età</label>
+                <div class="input-group">
+                    <input type="number" name="age" id="age">
+                </div>
+            </div>
+
+
+            <button id="btnCalc">Calcola prezzo</button>
+        </div>
+
     </div>
 
     <div class="ticket">
