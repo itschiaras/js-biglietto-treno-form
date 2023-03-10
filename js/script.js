@@ -36,18 +36,20 @@ btnCalc.addEventListener('click', function () {
 
     if (ageInput.value < 18) {
     let ticketPrice = (standardRate * km) - (standardRate * km) * 0.20;
+    ticketPrice = ticketPrice.toFixed(2);
     price.innerHTML += `<h5>Prezzo Tariffa Junior</h5>${ticketPrice}&euro;`
     nameHere.innerHTML = `<h5>Nome Passeggero</h5>${name}`;
     console.log(ticketPrice);
 
     } else if (ageInput.value >= 65) {
         let ticketPrice = (standardRate * km) - (standardRate * km) * 0.40;
+        ticketPrice = ticketPrice.toFixed(2);
         price.innerHTML += `<h5>Prezzo Tariffa Senior</h5>${ticketPrice}&euro;`
         nameHere.innerHTML = `<h5>Nome Passeggero</h5>${name}`;
         console.log(ticketPrice);
     } else {
         let ticketPrice = (standardRate * km);
-        
+        ticketPrice = ticketPrice.toFixed(2);
         price.innerHTML += `<h5>Prezzo Tariffa Standard</h5>${ticketPrice}&euro;`
         nameHere.innerHTML = `<h5>Nome Passeggero</h5>${name}`;
         console.log(ticketPrice);
